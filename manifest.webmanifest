@@ -1,0 +1,18 @@
+{
+  "name": "BlockMods — Mods para Minecraft",
+  "short_name": "BlockMods",
+  "description": "Catálogo independente de mods para Minecraft.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b100d",
+  "theme_color": "#101510",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

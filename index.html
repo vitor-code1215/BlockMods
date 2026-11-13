@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101510">
+  <meta name="description" content="BlockMods — descubra, organize e avalie mods para Minecraft.">
+  <meta property="og:title" content="BlockMods — Mods para Minecraft">
+  <meta property="og:description" content="Explore mods, encontre novas aventuras e personalize seu Minecraft.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>BlockMods — Mods para Minecraft</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="BlockMods início"><span class="brand-mark">B</span><span>BLOCK<span class="green">MODS</span></span></a>
+    <nav class="nav"><a href="#explorar">Explorar</a><a href="#categorias">Categorias</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
+    <button class="btn btn-outline admin-open" id="openAdmin">＋ Adicionar mod</button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> SUA CENTRAL DE MODS</div>
+        <h1>Seu Minecraft.<br><span class="gradient-text">Suas possibilidades.</span></h1>
+        <p>Explore mods incríveis, transforme seu mundo e descubra novas maneiras de jogar.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#explorar">Explorar catálogo <span>↗</span></a><a class="text-link" href="#sobre">Conheça o projeto <span>→</span></a></div>
+        <div class="hero-trust"><span>✓ Links para páginas dos projetos</span><span>✓ Catálogo pesquisável</span><span>✓ Feito para mobile</span></div>
+        <div class="hero-stats"><div><strong id="modCount">06</strong><span>mods no catálogo</span></div><i></i><div><strong id="favoriteCount">00</strong><span>mods favoritos</span></div></div>
+      </div>
+      <div class="hero-art" aria-label="Arte decorativa de blocos de Minecraft">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="floating-tag tag-top">✦ MODS EM DESTAQUE</div>
+        <div class="cube cube-main"><div class="cube-top"></div><div class="cube-front"><span>BM</span></div><div class="cube-side"></div></div>
+        <div class="cube cube-small"><div class="cube-top"></div><div class="cube-front"></div><div class="cube-side"></div></div>
+        <div class="floating-tag tag-bottom"><span class="green">●</span> NOVAS AVENTURAS COMEÇAM AQUI</div>
+      </div>
+    </section>
+
+    <section class="catalog section" id="explorar">
+      <div class="section-heading"><div><div class="eyebrow">O QUE VOCÊ PROCURA?</div><h2>Explore o catálogo<span class="green">.</span></h2><p>Encontre o mod perfeito para sua próxima aventura.</p></div><div class="catalog-count"><strong id="visibleCount">06</strong><span> resultados</span></div></div>
+      <div class="toolbar">
+        <label class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar mods..." autocomplete="off"><kbd>⌘ K</kbd></label>
+        <div class="filter-wrap"><select id="categoryFilter" aria-label="Filtrar por categoria"><option value="Todas">Todas as categorias</option></select><select id="versionFilter" aria-label="Filtrar por versão"><option value="Todas">Todas as versões</option></select><select id="sortFilter" aria-label="Ordenar mods"><option value="featured">Em destaque</option><option value="rating">Melhor avaliados</option><option value="name">Nome: A–Z</option><option value="newest">Adicionados recentemente</option></select><button class="btn btn-outline favorites-toggle" id="favoritesToggle" aria-pressed="false">♡ Favoritos</button></div>
+      </div>
+      <div class="catalog-tools" id="categorias"><div class="chips" id="categoryChips"></div><div class="view-switch" aria-label="Modo de visualização"><button id="gridView" class="view-btn selected" aria-label="Grade" title="Grade">▦</button><button id="listView" class="view-btn" aria-label="Lista" title="Lista">☷</button></div></div>
+      <div class="mod-grid" id="modGrid"></div>
+      <div class="empty-state hidden" id="emptyState"><div>⌕</div><h3>Nenhum mod encontrado</h3><p>Tente outro termo ou categoria.</p><button class="btn btn-outline" id="clearFilters">Limpar filtros</button></div>
+      <div class="catalog-foot"><span id="catalogStatus">Mostrando todos os mods</span><button class="text-button" id="resetCatalog">Limpar todos os filtros ↺</button></div>
+    </section>
+
+    <section class="community" id="sobre"><div class="community-icon">✦</div><div><div class="eyebrow">FEITO PARA QUEM AMA MINECRAFT</div><h2>Seu próximo mundo começa aqui.</h2><p>O BlockMods reúne ideias e ferramentas da comunidade em um só lugar. Explore, avalie e compartilhe suas descobertas.</p></div><a class="btn btn-primary" href="#explorar">Ver os mods <span>↗</span></a></section>
+    <section class="contact-strip" id="contato"><div><div class="eyebrow">PARTICIPE DO CATÁLOGO</div><h2>Tem um mod para indicar?</h2><p>Envie uma sugestão pelo painel local. Para receber sugestões publicamente, será necessário configurar um formulário conectado a um backend ou e-mail.</p></div><button class="btn btn-outline" id="contactSuggest" type="button">Sugerir um mod ＋</button></section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#"><span class="brand-mark">B</span><span>BLOCK<span class="green">MODS</span></span></a><p>Um universo de possibilidades para Minecraft.</p><div class="footer-bottom"><span>© <span id="year"></span> BlockMods. Projeto independente.</span><span>Minecraft é uma marca da Mojang Studios. Este site não é afiliado à Mojang ou Microsoft.</span></div></footer>
+
+  <div class="modal hidden" id="detailModal" role="dialog" aria-modal="true" aria-labelledby="detailTitle"><div class="modal-backdrop" data-close="detail"></div><article class="modal-panel detail-panel"><button class="modal-close" data-close="detail" aria-label="Fechar">×</button><div id="detailContent"></div></article></div>
+  <div class="modal hidden" id="adminModal" role="dialog" aria-modal="true" aria-labelledby="adminTitle"><div class="modal-backdrop" data-close="admin"></div><article class="modal-panel admin-panel"><button class="modal-close" data-close="admin" aria-label="Fechar">×</button><div class="eyebrow">PAINEL DO CATÁLOGO</div><h2 id="adminTitle">Adicionar um mod<span class="green">.</span></h2><p class="form-note">Os mods adicionados aqui ficam salvos somente neste navegador.</p>
+    <form id="modForm">
+      <label>Nome do mod<input name="name" required maxlength="60" placeholder="Ex.: Better Adventures"></label>
+      <div class="form-row"><label>Categoria<select name="category" required><option value="Aventura">Aventura</option><option value="Construção">Construção</option><option value="Tecnologia">Tecnologia</option><option value="Decoração">Decoração</option><option value="Desempenho">Desempenho</option><option value="Mobs">Mobs</option><option value="Utilidade">Utilidade</option></select></label><label>Versão do Minecraft<input name="version" required maxlength="20" placeholder="Ex.: 1.20.1"></label></div>
+      <label>Descrição<textarea name="description" required maxlength="500" rows="3" placeholder="O que esse mod adiciona?"></textarea></label>
+      <label>URL da imagem<input name="image" type="url" placeholder="https://... (opcional)"></label>
+      <label>Link da página oficial do mod<input name="download" type="url" required placeholder="https://modrinth.com/mod/..."></label>
+      <button class="btn btn-primary full" type="submit">＋ Publicar no catálogo</button>
+    </form>
+    <div class="admin-tools"><button class="btn btn-outline" id="exportMods" type="button">↓ Exportar meus mods</button><label class="btn btn-outline import-label">↑ Importar backup<input type="file" id="importMods" accept="application/json,.json" hidden></label></div>
+    <p class="tiny-note">Este painel é local e não tem autenticação. Os dados ficam apenas neste navegador. Publique somente páginas oficiais e conteúdo autorizado.</p>
+  </article></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+  <script>if ("serviceWorker" in navigator && location.protocol.startsWith("http")) { window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(() => {})); }</script>
+</body>
+</html>
